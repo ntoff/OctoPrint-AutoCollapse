@@ -15,7 +15,7 @@ class AutocollapsePlugin(octoprint.plugin.SettingsPlugin,
 
 	def get_template_configs(self):
 		return [
-			dict(type="settings", custom_bindings=False)
+			dict(type="settings", custom_bindings=False, name="Auto Collapse")
 		]
 
 	def get_assets(self):
