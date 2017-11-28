@@ -11,25 +11,5 @@
                 <span class="help-block">{{ _('Timeout before the files accordion auto collapses after initial UI load or refresh. Set to 0 to disable.') }}</span>
             </div>
         </div>
-        <div class="control-group">
-            <label class="control-label">{{ _('Auto collapse timeout (mouse out) ') }}</label>
-            <div class="controls">
-                <div class="input-append">
-                    <input type="number" min="0" class="input-mini" data-bind="value: settings.plugins.autocollapse.mouseOutTimeout">
-                    <span class="add-on">Sec</span>
-                </div>
-                <span class="help-block">{{ _('Timeout before the files accordion auto collapses after losing mouse focus. Setting this to 0 will collapse instantly upon losing mouse focus.') }}</span>
-            </div>
-        </div>
-        <!-- not yet implemented, leaving here as a reminder
-        <div class="control-group">
-            <label class="control-label">{{ _('Only collapse if file loaded.') }}</label>
-            <div class="controls">
-                <div class="input-append">
-                    <input type="checkbox" class="input-mini" data-bind="checked: settings.plugins.autocollapse.autoCollapse">
-                </div>
-                <span class="help-block">{{ _('Only automatically collapse the files accordion if a file is loaded.') }}</span>
-            </div>
-        </div>-->
     </form>
 </div>

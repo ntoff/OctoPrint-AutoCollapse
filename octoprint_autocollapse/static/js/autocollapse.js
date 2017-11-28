@@ -19,24 +19,6 @@ $(function() {
                     }
                 }, timeout*1000);
         }
-
-        function expandFiles() {
-            if ($("#files_wrapper .accordion-toggle").hasClass("collapsed")){
-                $("#files_wrapper .accordion-toggle").click();
-            }
-        }
-        
-        $("#files_wrapper").mouseenter(function() {
-            clearTimeout(self.timerCollapse);
-            expandFiles();
-        })
-
-        $("#files_wrapper").mouseleave(function() {
-            var leaveTimeout = parseInt(self.settings.settings.plugins.autocollapse.mouseOutTimeout());
-            if (leaveTimeout == 0) {leaveTimeout = 0.5} //a small fudge factor is necessary to circumvent a certain condition where if you mouse over and mouse out very fast, the accordion becomes stuck in a weird state.
-            collapseFiles(leaveTimeout);
-        })
-
         self.onBeforeBinding = function () {
             var timeout = parseInt(self.settings.settings.plugins.autocollapse.initialTimeout());
             if (timeout == 0) { 
@@ -48,7 +30,6 @@ $(function() {
         }
 
         self.onSettingsHidden = function () {
-            var leaveTimeout = parseInt(self.settings.settings.plugins.autocollapse.mouseOutTimeout());
             var timeout = parseInt(self.settings.settings.plugins.autocollapse.initialTimeout());
         }
         
