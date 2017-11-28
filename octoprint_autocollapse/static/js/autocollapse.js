@@ -14,8 +14,9 @@ $(function() {
         function collapseFiles(timeout) {
             var timeout = timeout;
                 self.timerCollapse = setTimeout(function() {
-                    if (!$("#files_wrapper .accordion-toggle").hasClass("collapsed")){
-                        $("#files_wrapper .accordion-toggle").click();
+                    var filesAccordion = $("#files");
+                    if (filesAccordion.hasClass("in")) {
+                        filesAccordion.collapse("hide") && filesAccordion.attr("class", "accordion-body collapse");
                     }
                 }, timeout*1000);
         }
