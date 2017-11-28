@@ -11,7 +11,6 @@ class AutocollapsePlugin(octoprint.plugin.SettingsPlugin,
 		return dict(
 			#autoCollapse=True
 			initialTimeout=30,
-			mouseOutTimeout=30,
 		)
 
 	def get_template_configs(self):
@@ -29,9 +28,7 @@ class AutocollapsePlugin(octoprint.plugin.SettingsPlugin,
 		s = self._settings
 		if "initialTimeout" in data.keys():
 			s.setInt(["initialTimeout"], data["initialTimeout"])
-		if "mouseOutTimeout" in data.keys():
-			s.setInt(["mouseOutTimeout"], data["mouseOutTimeout"])
-		#TODO: only auto collapsing if a file is loaded
+		#todo: only auto collapse if a file is loaded
 		#if "autoCollapse" in data.keys(): 
 		#	s.setBoolean(["autoCollapse"], data["autoCollapse"])
 		self.on_settings_cleanup()
