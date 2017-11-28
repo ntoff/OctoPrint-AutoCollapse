@@ -20,6 +20,12 @@ $(function() {
                     }
                 }, timeout*1000);
         }
+
+        //disable auto collapse if mouse enters the files accordion, assume user wants to interact with it
+        $("#files_wrapper").mouseenter(function() {
+            clearTimeout(self.timerCollapse);
+        })
+
         self.onBeforeBinding = function () {
             var timeout = parseInt(self.settings.settings.plugins.autocollapse.initialTimeout());
             if (timeout == 0) { 
