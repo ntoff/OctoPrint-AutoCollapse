@@ -9,7 +9,6 @@ $(function() {
         var self = this;
         'use strict';
         self.settings = parameters[0];
-        //self.state = parameters[1];
 
         function collapseFiles(timeout) {
             var timeout = timeout;
@@ -44,7 +43,6 @@ $(function() {
 
     OCTOPRINT_VIEWMODELS.push({
         construct: AutocollapseViewModel,
-        dependencies: [ "settingsViewModel"/*, "printerStateViewModel" */],
-        elements: [ /* ... */ ]
+        dependencies: [ "settingsViewModel"],
     });
 });
