@@ -1,8 +1,8 @@
 # OctoPrint-AutoCollapse
 
-Automatically collapse the Files accordion after a set timeout. 
+Automatically collapse the Files accordion on page load after a set timeout.
 
-Hovering over the files accordion will disable the auto hide timer and prevent the accordion from collapsing.
+See wiki -> FAQ for info
 
 ## Setup
 
