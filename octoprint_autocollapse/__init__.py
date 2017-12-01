@@ -15,7 +15,7 @@ class AutocollapsePlugin(octoprint.plugin.SettingsPlugin,
 
 	def get_template_configs(self):
 		return [
-			dict(type="settings", custom_bindings=False, name="Auto Collapse")
+			dict(type="settings", custom_bindings=False, name="Auto Collapse Files")
 		]
 
 	def get_assets(self):
@@ -76,7 +76,8 @@ class AutocollapsePlugin(octoprint.plugin.SettingsPlugin,
 			)
 		)
 
-__plugin_name__ = "Accordion Autocollapse"
+__plugin_name__ = "Auto Collapse Files"
+__plugin_description__ = "Auto collapse the files accordion after loading the UI"
 
 def __plugin_load__():
 	global __plugin_implementation__
