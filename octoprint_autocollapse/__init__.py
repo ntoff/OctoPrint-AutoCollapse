@@ -75,6 +75,7 @@ class AutocollapsePlugin(octoprint.plugin.SettingsPlugin,
 
 __plugin_name__ = "Auto Collapse Files"
 __plugin_description__ = "Auto collapse the files accordion after loading the UI"
+__plugin_pythoncompat__ = ">=2.7,<4"
 
 def __plugin_load__():
 	global __plugin_implementation__
